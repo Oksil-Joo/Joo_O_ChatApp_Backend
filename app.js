@@ -35,4 +35,10 @@ io.on('connection', (socket) => {
     socket.on("TYPING", (data) => {
         console.log(`${data.username} is typing`);
     })
+
+    socket.on("disconnect", () => {
+        console.log('user disconnected');
+      })
+
 });
+
